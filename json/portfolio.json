@@ -1,0 +1,28 @@
+{
+  "owl" : [
+      {
+        "item" :
+        "<div class='items'><div><img src='images/tree1.jpg' alt='json'><h3 class='tw pd-1 ui-font-d'>黑柿蕃茄</h3><p class='tw pb-3 ui-font-d ta-l pd-box'>黑柿品種酸甜滋味層次豐富，適宜生吃，也是烹煮、熬湯、煮醬的好角色，尤其要以熬煮蕃茄肉湯、蕃茄炒蛋或熬煮蕃茄牛肉湯、燉煮蕃茄豬肉，黑柿蕃茄都是最好的選擇。如果是綠色未熟略硬的可以拿來作綠番茄果醬，希望成熟一點的話，請記得「先不要放入冰箱」，要放在常溫後熟再來使用，一旦放入冰箱就不會再熟成了！</p></div></div>"
+      },
+      {
+        "item" :
+        "<div class='items'><div><img src='images/tree2.jpg' alt='json'><h3 class='tw pd-1 ui-font-d'>珍珠芭樂</h3><p class='tw pb-3 ui-font-d ta-l pd-box'>芭樂富含豐富的維生素C，是柳橙的三倍以上，可以幫助抗氧化，也有助於維護肌膚健康。想要減重的朋友也可以嘗試飯前吃一顆芭樂，因為芭樂低熱量、高纖維、水分多，其中的粗纖維容易使胃部產生飽足感，讓您能夠控制飲食。 </p></div></div>"
+      },
+      {
+        "item" :
+        "<div class='items'><div><img src='images/tree3.jpg' alt='json'><h3 class='tw pd-1 ui-font-d'>金鑽鳳梨</h3><p class='tw pb-3 ui-font-d ta-l pd-box'>果實結實飽滿，有重量感，果實無裂縫，果目明顯凸起，新鮮的金鑽鳳梨聞起來有一種特殊香味。果肉深黃多汁，甜度高，酸味低，吃起來爽口芳香。</p></div></div>"
+      },
+      {
+        "item" :
+        "<div class='items'><div><img src='images/tree4.jpg' alt='json'><h3 class='tw pd-1 ui-font-d'>香蕉</h3><p class='tw pb-3 ui-font-d ta-l pd-box'>香蕉含有豐富營養，「維他命B2和檸檬酸」可產生協合作用，紓解人體疲勞。「纖維素及果膠和果膠糖」可增強腸內有益細菌（乳酸菌）的活力，刺激腸蠕動，減少致癌物質的停留，降低直腸結腸癌的發生。 香蕉含鉀量高，可抑制血壓上升，適合高血壓、心臟病人攝食，但腎功能代謝不良者，應注意遵守醫囑食用。</p></div></div>"
+      },
+      {
+        "item" :
+        "<div class='items'><div><img src='images/tree5.jpg' alt='json'><h3 class='tw pd-1 ui-font-d'>紅肉李</h3><p class='tw pb-3 ui-font-d ta-l pd-box'>紅肉李子醋有豐富的鐵、綜合維生素、纖維素、酵素，可預防膀胱無力、頻尿和子宮收縮不良，強化血紅素機能，能促進胃酸和胃消化酶的分泌，有增加腸胃蠕動的作用，因而食李能促進消化，增加食欲，為胃酸缺乏、食后飽脹、大便秘結者的食療良品</p></div></div>"
+      },
+      {
+        "item" :
+        "<div class='items'><div><img src='images/tree6.jpg' alt='json'><h3 class='tw pd-1 ui-font-d'>檸檬</h3><p class='tw pb-3 ui-font-d ta-l pd-box'>檸檬屬於柑橘類的一種，是柑橘類中唯一全年有果的水果，台灣主要產區為屏東。 目前台灣的檸檬主要有有籽檸檬 (Eureka、優利卡)、無籽檸檬 (萊姆)和香水檸檬 (黃色檸檬) 三種，目前以有籽檸檬為大宗。 香水檸檬近年來日益受到歡迎，台中、彰化與花東有種植，但產量稀少。</p></div></div>"
+      }
+  ]
+}

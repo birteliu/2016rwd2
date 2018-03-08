@@ -1,0 +1,751 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+h1{
+    font-size: 10vw;
+    line-height: 0.8;
+    color: #313131;
+}
+body:after {
+    content: url("../images/banner1.jpg") url("../images/banner2.jpg") url("../images/banner3.jpg") url("../images/banner4.jpg");
+    display: none;
+}
+
+a {
+    -webkit-transition: all ease-in-out .4s;
+    -o-transition: all ease-in-out .4s;
+    transition: all ease-in-out .4s;
+}
+
+#page {
+    -webkit-transition: all ease-in-out .4s;
+    -o-transition: all ease-in-out .4s;
+    transition: all ease-in-out .4s;
+}
+
+.ui-bgcl {/*full-width element bg color 淺色*/ /*ui:user interface使用者介面*/
+    background-color: #F4F4F8 ;
+}
+
+.ui-bgcl-m {/*full-width element bg light middle color 比淺色深*/
+    background-color: #E5E5EA;
+}
+
+.ui-bgc-g {/*full-width element bg light dark color*/
+    /*background-color: ;*/
+}
+
+
+.ui-bgc-bd {/*full-width element bg dark color footer*/
+    background-color: #313131;
+}
+
+.ui-font-l {/*if need lighter font color 有需要淺色文字時用*/
+    color: #666666;
+}
+
+.ui-font-d {/*if need darker font color 有需要深色文字時用*/
+    color: #313131;
+}
+
+.ui-mask {/*header swiper-slide mask div 蓋一個漸層半透明色塊到swiper圖片上*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+    background: #1b242b;
+    /* For browsers that do not support gradients 給不認識的瀏覽器讀的 */
+    background: -webkit-linear-gradient(to top, #313131 10%, #F9F9F9);  /*下到上-黑到白*/
+    /* For Safari 5.1 to 6.0*/
+    background: -o-linear-gradient(to top, #313131 10%, #F9F9F9);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(to top, #313131 10%, #F9F9F9);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top, #313131 10%, #F9F9F9);
+    /* Standard syntax */
+
+}
+
+.ui-img100{
+    width: 100%;
+    margin: 0;
+    display: block;
+}
+
+.ui-bg-img{
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;  /*當視窗滾動,圖片不要跟著動,有auto,fixed,scroll,local四個值*/
+    color: #F9FDFF;
+    text-shadow: 1px 1px o rgba( 0, 0, 0, 0.35);
+}
+
+.ui-bg-img h1{
+    font-size: 3.8em;
+    color: #313131;
+    line-height: 1.2;
+}
+
+.ui-btn {/*main button interface 按鈕*/
+    min-width: 140px;
+    display: inline-block;
+    text-align: center;
+    line-height: 2;
+    padding: 4px 1.5em 7px 1.5em;
+    font-size: 18px;  /*16px=1em*/
+    background-color: #939E1F;  /*按鈕顏色*/
+    color: #F9FDFF; /*文字顏色*/
+    border-radius: 6px;
+    box-shadow: 0 4px 0 #757C12;  /*按鈕陰影,值分別為:x軸位移 y軸位移 擴散 顏色*/
+    -webkit-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+.ui-btn:hover {
+    background-color: #9FAA22;
+    color: #F9FDFF;
+}
+
+.ui-small-content {/*less content use*/
+    width: 80%;
+    max-width: 760px;
+    float: none;
+    margin: 0 auto;
+}
+
+.ui-small-content p{
+    float: left;
+    width: 100%;
+    color: #313131;
+    font-size: 1em;
+    line-height: 2;
+    text-align: justify;
+    /*letter-spacing: 16px;*/ /*使字之間有間距*/
+    /*word-spacing: 18px;*/  /*可使空格之間的間距更大*/
+} 
+
+/*p:first-line控制段落第一行*/
+.ui-small-content p:first-line{  
+    color: #51560F; 
+    float: left;
+}
+
+/*p:first-letter 加上float: left;浮動會使後面的字圍繞首字大寫去排版*/
+/*
+.ui-small-content p:first-letter{ 
+font-size: 2em;
+}
+*/
+
+/*
+.ui-small-content span{
+display: block;
+}
+*/
+
+.ui-icon-wrap {/*#features icon outer*/
+    width: 180px;
+    height: 180px;
+    display: block;  /*block使在頁面中間*/
+    content: " ";  /*內容為空,要讓wrap有高度寬度*/
+    -webkit-border-radius: 50%; /*50%=圓角*/
+    margin: 30px auto;
+    float: none;
+    overflow: hidden;  /*讓陰影超過圓圈不會顯示*/
+}
+
+.ui-icon-bg{
+    background-color: #757C12;
+}
+
+.margin-c{
+    margin: 0 25px 0 0;
+}
+
+/*use text long shadow*/
+.ui-icon-wrap i, .ui-icon-wrap span, .ui-icon-wrap strong {
+    display: inline-block;
+    vertical-align: middle;  /*垂直對齊*/
+    font-size: 60px;
+    line-height: 60px;  /*1*/
+    margin-top: 60px;
+    color: #F9FDFF;
+    text-shadow: rgb(104, 110, 16) 1px 1px,
+        rgb(104, 110, 16) 2px 2px,
+        rgb(104, 110, 16) 3px 3px,
+        rgb(104, 110, 16) 4px 4px,
+        rgb(104, 110, 16) 5px 5px,
+        rgb(105, 111, 16) 6px 6px,
+        rgb(105, 111, 16) 7px 7px,
+        rgb(106, 112, 16) 8px 8px,
+        rgb(106, 112, 16) 9px 9px,
+        rgb(107, 113, 16) 10px 10px,
+        rgb(107, 113, 16) 11px 11px,
+        rgb(107, 114, 16) 12px 12px,
+        rgb(108, 114, 16) 13px 13px,
+        rgb(108, 115, 16) 14px 14px,
+        rgb(109, 115, 16) 15px 15px,
+        rgb(109, 116, 16) 16px 16px,
+        rgb(110, 116, 16) 17px 17px,
+        rgb(110, 117, 17) 18px 18px,
+        rgb(110, 117, 17) 19px 19px,
+        rgb(111, 117, 17) 20px 20px,
+        rgb(111, 118, 17) 21px 21px,
+        rgb(112, 118, 17) 22px 22px,
+        rgb(112, 119, 17) 23px 23px,
+        rgb(113, 119, 17) 24px 24px,
+        rgb(113, 120, 17) 25px 25px,
+        rgb(113, 120, 17) 26px 26px,
+        rgb(114, 121, 17) 27px 27px,
+        rgb(114, 121, 17) 28px 28px,
+        rgb(115, 122, 17) 29px 29px,
+        rgb(115, 122, 17) 30px 30px,
+        rgb(116, 123, 17) 31px 31px,
+        rgb(116, 123, 17) 32px 32px,
+        rgb(117, 124, 18) 33px 33px;
+}
+
+h5 a{
+    color: #313131;
+}
+
+h5 a:hover{
+    color: #3A3D0B;
+}
+
+.ui-line-s {  /*#features h5 after short line 做底線*/
+    width: 50px;
+    display: inline-block;
+    height: 4px;
+    margin: 10px 15px;
+    content: " ";
+    background-color: #E55934;
+}
+
+.ui-link {/*won't use it*/
+    color: inherit;
+    display: inline-block;
+    padding: 3px 8px;
+    vertical-align: middle;  /*垂直對齊*/
+    border-bottom: 1px dotted #777;
+}
+
+.ui-media-frame { /*#design youtube wrapper*/
+    position: relative;
+    height: 0;  
+    padding: 0 4% 59% 4%;
+    margin: 0 auto;
+    width: 96%;
+    float: left;
+    margin-bottom: 1em;
+}
+
+.ui-media-frame .iframe {
+    position: absolute;  
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.ui-media-frame + * {
+    padding: 3% 2% 5% 2%;
+}
+
+.line-h{
+    line-height: 2;    
+}
+
+*[data-hidden] {  /*animal燈箱的下方縮圖,使在頁面隱藏*/
+    height: 0;  /*寬高設0,否則會在頁面有透明寬度*/
+    width: 0;
+    visibility: hidden;  /*visibility可視*/
+}
+
+.sprite {/*#team socialmedia icon outer*/
+    width: 50px;
+    height: 50px;
+    display: inline-block;  /*因為要併排,所以要用inline-block,不可用block*/
+    font-size: 20px;
+    background-color: #757C12;
+    border-radius: 50%;
+    padding: 15px 0;
+    margin: 30px 5px;
+    text-align: center;
+    line-height: 1;
+    color: #F9FDFF;
+}
+
+.sprite:hover {
+    /*background-color:;
+    color: ;*/
+}
+
+.svg-clipset{
+    margin: 0 30px -30px 0;
+    display: block;
+}
+
+.pd-box-lg {
+    width: 100%;
+    float: left;
+    font-size: 1em;
+    line-height: 2;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8% 4% 5% 4%;
+}
+
+/*=========sd-menu setting=======*/
+.sd-menu {  
+    width: 100%;
+    float: left;
+    display: none;  /*製作時可以先註解,讓menu可以看到*/
+    margin: 0;
+    background-color: #313131;
+}
+
+.sd-menu ul {
+    width: 90%;  /*寬度低於920px時,menu點開縮放時文字永遠有左右各5%的距離*/
+    max-width: 920px;  /*最大menu展開文字的寬度是*/
+    margin: 30px auto;
+}
+
+.sd-menu li {
+    display: block;
+}
+
+.sd-menu a {
+    display: block;
+    line-height: 2;  /*設置以百分比計的行高*/
+    padding: 8px 5em;
+    border-bottom: 1px dotted #A3A842;  /*使文字底下有dotted虛線*/
+    color: #A3A842;
+    position: relative;
+    font-size: 1em;
+}
+
+.sd-menu a,
+.sd-menu a:after {
+    -webkit-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+.sd-menu li:last-of-type a {  /*使menu最後一個Contact文字下面沒有線*/
+    border: none;
+}
+
+.sd-menu a:after {
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'fontello';
+    content: '\e80c';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    float: right;  /*因為浮動靠右所以圖示在右邊*/
+    margin-right: 10px;
+}
+
+.sd-menu a:hover {
+    color: #D4DB4A;
+}
+
+.sd-menu a:hover:after {
+    margin-right: 0;  /*使右邊箭頭hover時,margin從10px變為0px*/
+}
+
+.sd-menu.in {
+    position: relative;
+    z-index: 0;
+    margin-top: 0%;
+    -webkit-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+.sd-opener {
+    position: absolute;
+    width: 60px;
+    height: 60px;  /*做選單按鈕不要小於40px因為一般人手指的點擊面積是40*40px*/
+    font-size: 40px;
+    font-family: 'fontello';
+    line-height: 1;  /*列高1=跟文字一樣大*/
+    text-align: center;
+    padding: 10px 0;
+    top: 20px;
+    right: 20px;
+    z-index: 1;  /*設置元素的堆疊順序*/
+}
+
+.sd-opener:after {  /*只要是before,after都是行內元素*/
+    display: inline-block;  /*所以display要設才會看得到*/
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    line-height: 1; /*列高1=跟文字一樣大*/
+    text-align: center;
+    color: #51560F;
+    font-weight: normal;
+    font-style: normal;
+    content: '\e826';
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.sd-opener.close:after {
+    content: '\e808';
+    color: #51560F;  /*點擊後icon的顏色*/
+}
+
+.sd-opener:after,
+.sd-opener.close:after,
+.sd-opener {
+    -webkit-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+/*=========header setting=======*/
+header {
+    height: 90vh; /*vh:viewport-height視窗高度,vh90:符合視窗高度90%*/
+}
+
+.logo-wrap{  /*如果要放logo圖片在header可以用這個css*/
+    width: %;
+    min-width: 280px;
+    display: inline-block;
+    background-image: url(" ");  /*圖片位置*/
+    -webkit-background-size:100%;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    min-height: vh;
+}
+
+header .container {
+    padding: 25vh 0 0 0;
+}
+
+header .swiper-container {
+    z-index: 0;  /*使swiper在nav的後面(nav的圖層為0)*/
+    width: 100%;
+    height: 100%;
+}
+
+header .swiper-slide {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;  /*使圖片符合外框架大小,超過的不顯示*/
+    background-size: cover;  /*如果值為contain,會在框架裡顯示原始圖片比例,不足的留白*/
+}
+
+.swiper-slide img{
+    width: 30%;
+    max-width: 480px;
+    display: block;
+    margin: 0 auto;
+}
+header .swiper-pagination-bullet {  /*swiper-slide的按鈕*/
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #FFF;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+header .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #E55934;  /*#9FAA22*/
+}
+
+header .swiper-slide[data-slide="1"] {
+    background-image: url("../images/banner1.jpg");
+}
+
+header .swiper-slide[data-slide="2"] {
+    background-image: url("../images/banner2.jpg");
+}
+
+header .swiper-slide[data-slide="3"] {
+    background-image: url("../images/swiper2.jpg");
+}
+
+header .swiper-slide[data-slide="4"] {
+    background-image: url("../images/banner4.jpg");
+}
+
+header h1 {
+    color: #F9F7F9;
+    font-size: 3.2em;
+    line-height: 1.5;
+    word-break: break-all;
+}
+
+header h1 span {
+    color: #3A3D0B;
+    display: inline-block;
+}
+
+header h6 {
+    font-size: 1.2em;
+    color: #232323;
+}
+
+article h2 {
+    text-transform: capitalize; /*英文首字大寫*/
+    color: #313131;
+    font-size: 1.2;
+    line-height: 2.5;
+}
+
+article h2 .h2-dec {/*svg arrow use*/
+    width: 45%;
+    height: 20px;
+    min-height: 40px;
+    display: block;
+    margin: 0 auto 8px auto;
+    -webkit-background-size:100%;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url("../images/line.svg")
+        /*
+        -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.35));  filter濾鏡只對圖片有作用
+        -moz-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.35));
+        -o-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.35));
+        filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.35));
+
+        */
+}
+
+#dot {
+    /*fill: ;*/
+}
+
+#arrow {
+    /*fill: ;*/
+}
+
+article p {
+    color: #313131;
+    line-height: 2;
+}
+/*all owl.js use region*/  /*萬一有類似的名稱,可以用排除選擇器控制選取的字樣*/
+[class*="slide"]:not(.slides):not(.swiper-slide) {  
+    width: 100%;
+    padding: 0 10px;
+}
+
+[class*="slide"]:not(.slides):not(.swiper-slide) div.slides {
+    min-height: 43vmin;
+}
+
+[class*="slide"]:not(.slides):not(.swiper-slide) .items {
+    display: block;
+}
+
+[class*="slide"]:not(.slides):not(.swiper-slide) .items div {
+    margin: 0 15px 30px 15px;
+    min-height: 25vmin;
+    text-align: center;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+[class*="slide"]:not(.slides):not(.swiper-slide) .items div p {
+    display: block;
+    width: 100%;
+    padding: 0 15px;
+    /*    text-align: center;*/
+    float: left;
+}
+
+[class*="slide"]:not(.slides):not(.swiper-slide) .items div img {
+    width: 100%;
+    display: block;
+    margin: 20px auto 10px auto;
+}
+
+[class*="slide"]:not(.slides):not(.swiper-slide) h3 {
+    margin: 10px 0 0 0;
+}
+
+[class*="slide"]:not(.slides):not(.swiper-slide) h3:after {
+    width: 60px;
+    display: block;
+    height: 0;
+    /*    background-color: #A3A842;*/
+    content: " ";
+    border-bottom: 5px solid #757C12;
+    margin: 30px auto 0 auto;
+}
+
+form#web-form {
+    color: #3A3D0B;
+}
+
+form#web-form div {
+    margin-bottom: 5px;
+}
+
+form#web-form label {
+    float: left;
+    width: 20%;
+    min-width: 120px;
+    text-align: right;
+    padding: 5px 1em 0px 10px;
+    font-size: 1.15em;
+}
+
+form#web-form input[type="text"],
+form#web-form input[type="tel"],
+form#web-form input[type="email"],
+form#web-form textarea {
+    width: 65%;
+    line-height: 2;
+    font-size: 1.15em;
+    resize: none;  /*使訊息欄無法自由拖曳大小*/
+    padding: 3px;
+    background: none;
+    border-bottom: 1px solid #757C12;
+}
+
+form#web-form label[data-required]:after {
+    content: " * ";
+    display: inline-block;
+    color: #EF233C;
+    font-size: 1em;
+}
+
+form#web-form div:last-of-type {
+    text-align: center;
+    margin-top: 30px;
+}
+
+form#web-form .ui-btn {
+    /*  padding: 4px 1em;*/
+}
+
+form#web-form input[type="text"]:focus,
+form#web-form input[type="tel"]:focus,
+form#web-form input[type="email"]:focus,
+form#web-form textarea:focus {
+    border-bottom: 1px solid #3A3D0B;
+    -webkit-transition: all ease-in-out .35s;
+    -o-transition: all ease-in-out .35s;
+    transition: all ease-in-out .35s;
+}
+
+
+
+#top.sprite {
+    /*position: ;
+    z-index: ;
+    bottom: ;
+    left: -webkit-calc();
+    left: -moz-calc();
+    left: -ms-calc();
+    left: calc();
+    opacity: ;
+    background-color: ;
+    -webkit-transition: ;
+    -o-transition: ;
+    transition: ;
+    -webkit-transform: scale();
+    -ms-transform: scale();
+    -o-transform: scale();
+    transform: scale();*/
+}
+
+#top:hover {
+    /*opacity: ;
+    background-color: ;*/
+}
+
+footer {
+    color: #F4F4F8;
+}
+
+/*針對手機橫向後的畫面設定可寫landscape*/
+@media screen and (min-width: 300px) and (max-width: 640px) and (orientation:landscape){
+    header{height: 100vh;}
+    header .container{
+        padding: 15vh 0 0 0;
+    }
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
+    header .container {
+        /*padding: ;*/
+    }
+    .swiper-slide[data-slide="1"] {
+        /*background-image: url("");*/
+    }
+    .swiper-slide[data-slide="2"] {
+        /*background-image: url("");
+        background-position: X Y;*/
+    }
+    .swiper-slide[data-slide="3"] {
+        /*background-image: url("");*/
+    }
+    .swiper-slide[data-slide="4"] {
+        /*background-image: url("");*/
+    }
+    .ui-media-frame + * {
+        /*text-align: ;
+        margin-bottom: ;*/
+    }
+    .ui-small-content {
+        /*
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: ;
+        float: ;
+        margin: ;
+        padding: ;
+        */
+    }
+
+
+    form#web-form *:not(.ui-btn):not(.gw-12) {
+        width: 97%;
+        float: left;
+        margin: 0 1.5%;
+        text-align: left;
+        font-size: 1.2em;
+    }
+    form#web-form .gw-12 + .gw-12 {
+        margin-top: 1em;
+    }
+    footer * {
+        /*text-align: ;*/
+    }
+    .sd-menu a {
+        /*font-size: ;*/
+    }
+}

@@ -1,0 +1,201 @@
+<!--========================
+巨匠電腦 RWD 專班 第二網站準備文件
+網站外觀樣本請參照 source 內截圖
+此網站資料夾結構
+|-2016rwd_2/
+  |-css/
+  |-js/
+  |-json/
+  |-images/
+  |-font/
+  |-source/
+  |-dist/
+為單頁網站，此次需請同學鎖定一商品（可銷售交易的謂之商品）。
+請同學善盡文字排版責任，所有圖片與文字需符合自行定義之商品。
+
+不符合此點，屆時請重做，不再另行指導。
+
+PLUGIN LINKS
+swiper.js 中文 api 文檔連結
+http://www.swiper.com.cn/
+swiper.js 英文 api 文檔連結
+http://idangero.us/swiper/
+lightgallery link
+http://sachinchoolur.github.io/lightGallery/
+owl.js links
+http://owlgraphic.com/owlcarousel/
+long-shadow generator
+http://sandbox.juan-i.com/longshadows/
+
+images size
+swiper background
+1920 * 1080 -> 4 pic
+
+fix background images
+1280 * 900 -> 2 pic
+
+owl.js json( product images )
+16 : 10 --> 6 pic
+
+team images
+(in html will use svg clipPath make to octagan )
+1 : 1 --> 6 pic
+============================-->
+
+prepare and include css
+
+
+our style
+<!--
+(link[rel="stylesheet"][type="text/css"][href="css/style.css"][media="screen"])+(link[rel="stylesheet"][type="text/css"][href="css/rwd2.css"][media="screen"])
+-->
+plugin use
+<!--
+(link[rel="stylesheet"][type="text/css"][href="js/owl-l/owl.carousel.css"][media="screen"])+(link[rel="stylesheet"][type="text/css"][href="js/lightgallery/css/lightgallery.min.css"][media="screen"])+(link[rel="stylesheet"][type="text/css"][href="js/swiper/css/swiper.min.css"][media="screen"])
+-->
+
+step 01
+region html markup
+<!--
+#page>(.sd-menu)+(header.gw-12.mega.pos-r)+(div.main-region.gw-12.omega[role="main"])+(footer.gw-12.omega.pb-1)
+-->
+
+step 02 div.sd-menu child elements
+<!--
+ul>(li>a[href="#"])*6
+-->
+
+step 03 header child elements
+<!--
+(.swiper-conatiner>(.swiper-wrapper>.swiper-slide.pos-r[data-slide=""]>(.ui-mask)+(.container.cf.ta-c.pos-r>(h1>span)+(h6{slogan})+(.gw-12.omega.pt-3>a.ui-btn[data-scroll][href="#"])))+(.swiper-pagination))+(a.sd-opener[href="#page"][data-scroll])
+-->
+
+step 04 .main-region direct child elements
+<!--
+(article#a.gw-12.omega.pt-5>section.container.cf.ta-c>h2{region-title})+(article#a.gw-12.omega.pt-5.mh-80>section.container.cf.ta-c>h2{region-title})+(article#a.gw-12.omega.pt-5>section.row-container.cf>.caption>h2{region-title})+(div.gw-12.omega.ui-bg-img[style="background-image: url('')"]>(.ui-mask)+(div.container.cf.pd-5.ta-c.pos-r))+(article#a.gw-12.omega.pt-5>section.container.cf.ta-c>h2{region-title})+(div#google-search.gw-12.omega.pd-5>div.ui-small-content.cf)+(article#team.gw-12.omega.pt-5.lightGallery>section.container.cf.ta-c>div.slide.ta-c.smoove)+(div.gw-12.omega.ui-bg-img[style="background-image: url('')"]>(.ui-mask)+(div.container.cf.pd-5.ta-c.pos-r))+(article#contact.gw-12.omega.pt-5>section.container.cf.ta-c>h2{region-title})
+-->
+step 05-1 .lightGallery svg clipPath html markup
+<!--svg clipPath groups
+<div class="items">
+  <div class="pd-box" data-src="IMAGES PATH"
+  data-sub-html="<h3 class=''>TITLE</h3><p class=''>CONTENT TEXT</p>">
+    <svg class="svg-clipset" viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+      <g>
+        <clipPath id="clip">
+          <polygon points="50 0, 100 30, 100 86, 50 116, 0 86, 0 30" />
+        </clipPath>
+      </g>
+      <a xlink:href="javascript:void(0)">
+        <image width="100%" height="100%" xlink:href="IMAGES PATH" clip-path="url(#clip)"
+        preserveAspectRatio="xMidYMin slice" />
+      </a>
+    </svg>
+  <h3 class="pt-1">TITLE</h3>
+  <h6 class="pd-box ui-font-l">
+    TEXT
+    <br>
+    <a href="javascript:void(0)"
+      class="sprite icon-facebook-2"></a>
+    <a href="javascript:void(0)"
+         class="sprite icon-gplus-1"></a>
+    <a href="javascript:void(0)"
+         class="sprite icon-at"></a>
+  </h6>
+  <img src="IMAGES PATH" alt="" data-hidden>
+</div><!--gw-12-->
+</div><!--items-->
+end-->
+
+step 05 footer child elements
+<!--
+div.container.cf.pt-3>(.gw-4)+(.gw-8.omega)
+-->
+
+step 06 before body close tag include script
+<!--
+(script[src="js/jquery-1.11.3.min.js"])+(script[src="js/smooth-scroll.min.js"])+(script[src="js/sdMenu.min.js"])+(script[src="js/jquery.smoove.js"])+(script[src="js/owl-l/owl.carousel.min.js"])+(script[src="js/lightgallery/js/lightgallery-all.min.js"])+(script[src="js/swiper/js/swiper.min.js"])
+-->
+
+<!--===============plugin script api===============-->
+<!--swiper.js-->
+<script>
+  var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      slidesPerView: 1,
+      loopedSlides : 3,
+      centeredSlides: true,
+      paginationClickable: true,
+      spaceBetween: 0,
+      setWrapperSize :true,
+      loop: true,
+      observer:true,
+      autoplay: 5000,
+      speed: 1000,
+      grabCursor: true,
+
+
+  });
+  </script>
+<!--owl.js-->
+<script>
+$(function() {
+  $('.slide:eq(0)').owlCarousel({
+      items: 1,
+      singleItem: true,
+      itemsDesktop : [1000,1],
+   itemsDesktopSmall : [980,1],
+   itemsTablet: [768,1],
+   itemsTabletSmall: false,
+   itemsMobile : [640,1],
+  })
+  $('.slide:eq(1)').owlCarousel({
+      items: 3,
+      //autoPlay: true,
+      stopOnHover: true,
+      itemsDesktop : [1000,2],
+   itemsDesktopSmall : [980,2],
+   itemsTablet: [768,2],
+   itemsTabletSmall: false,
+   itemsMobile : [640,1],
+
+  })
+  $(".slide-json").owlCarousel({
+      jsonPath : "json/portfolio.json",
+      items: 3,
+      itemsDesktop : [1000,2],
+   itemsDesktopSmall : [980,2],
+   itemsTablet: [768,2],
+   itemsTabletSmall: false,
+   itemsMobile : [640,1],
+    });
+
+
+
+});
+</script>
+<!--lightGallery-->
+<script>
+$(document).ready(function() {
+
+     $(".lightGallery").lightGallery({
+      selector: $("[data-src]"),
+      mode: 'lg-fade',
+      thumbnail: true,
+      cssEasing: 'ease-in-out',
+      download: false,
+    fullScreen: true,
+    thumbnail:true,
+    animateThumb: false,
+    showThumbByDefault: false,
+    mousewheel: false,
+    hash: false,
+      preload: 4,
+
+     });
+      $('.smoove').smoove({
+         offset: '42%',
+         perspective: 800,
+       });//smoove
+ });
+
+</script>

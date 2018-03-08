@@ -1,0 +1,8 @@
+Learn Center(en) http://learn.jquery.com/
+
+http://www.jquery123.com/
+
+http://www.css88.com/jqapi-1.9/
+
+/*變數，暫時儲存一個值*/
+/*function裡面放函數*/

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery Test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <style type="text/css">
+            * {
+                padding: 0;
+                margin: 0;
+                vertical-align: baseline;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            html, body {
+                width: 100%;
+                height: 100%;
+            }
+            :root {
+                background-color: #ddd;
+            }
+            body {
+                font-size: 100%;
+                font-size: 1rem;
+                overflow-x: hidden;
+                font-family: "蘋方繁", "微軟正黑體", "Helvatica", "Arial", sans-serif;
+            }
+            #page {
+                background-color: #f1f1f1;
+                min-height: 100vmin;
+            }
+            .w-100 {
+                float: left;
+                width: 100%;
+            }
+            .w-33 {
+                width: calc((100% / 3) - 16px);
+            }
+            .w-50 {
+                width: calc((100% / 2) - 16px);
+            }
+            .w-25 {
+                width: calc((100% / 4) - 16px);
+            }
+            [class*="w-"]:not(.w-100) {
+                float: left;
+                margin: 8px;
+            }
+            .container {
+                width: 90%;
+                max-width: 1120px;
+                float: none;
+                margin: 0 auto;
+                display: block;
+            }
+            .container:before,
+            .container:after {
+                content: " ";
+                display: table;
+            }
+            .container:after {
+                clear: both;
+            }
+            .container{ *zoom: 1; }
+            .ta-c { text-align: center; }
+            .pd-1 {
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+            .pt-1 { padding-top: 1em; }
+            .pb-1 { padding-bottom: 1em; }
+            .pd-3 {
+                padding-top: 3em;
+                padding-bottom: 3em;
+            }
+            .pt-3 { padding-top: 3em; }
+            .pb-3 { padding-bottom: 3em; }
+            button {
+                padding: 10px;
+                line-height: 1;
+                font-size: 16px;
+            }
+            .changeBg {
+                background-color: #1aa6d2!important;
+                color: #fff;
+                -webkit-transition: all ease-in-out 4s;
+                -o-transition: all ease-in-out 4s;
+                transition: all ease-in-out 4s;  /*ease-in-out進出緩動*/
+            }
+        </style>
+    </head>
+    <body>
+        <div id="page" class="w-100">
+            <div class="container pb-1 pt-3">
+                <h1 class="ta-c">jQuery Test</h1>
+                <p class="ta-c pt-3">
+                    <button id="vBtn">Click Me</button>
+                    <br>
+                    JavaScript Button
+                </p>
+                <p class="ta-c pt-3">
+                    <button id="jBtn">Click Me</button>
+                    <br>
+                    jQuery Button
+                </p>
+            </div>
+        </div><!--#page-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+        <script>
+            function myFunc(){
+                var vBtn = document.getElementById('vBtn'), /*getElementById:選取頁面上的元素,ID就是vBtn*/
+                    p = document.getElementById('page');
+                vBtn.addEventListener('click', function(){  
+                    /*addEventListener監聽式,監聽括號裡的東西,click或mouseout*/
+                    p.classList.add('changeBg');  /*p:全域變數,點擊後changeBg背景會變色*/
+                    alert('Hello World');  /*click後,跳出警告視窗Hello World*/
+                    return false;
+                });
+            };
+            myFunc();
+            //jQuery function
+            ;(function($){
+                $(function(){
+                    var n = $('#page'),
+                        j = $('#jBtn'),
+                        msg = 'I\'m jQuery Button !!';  /*用\拖曳',使不要被認錯是在句子裡還是外面的標籤*/
+
+                    j.click(function(e){
+                        j.toggleClass('clicked');
+                        e.preventDefault();
+                        
+                        if(!j.is('.clicked')){  /*is後的括號裡要加.表示class;!表示反寫*/
+                            //match condition
+                            n.stop(true, true).removeClass('changeBg');
+                        }else{
+                            //not match condition
+                            n.stop(true, true).addClass('changeBg');
+                        };
+                        return false;
+                        
+                        alert('You Clicked Me\n' + ''+msg+'');
+                        /*alert改成console.log可以使警告視窗不會彈出,從開發人員工具裡面的console可以看到訊息*/
+                    });
+
+
+                });
+            })(jQuery);
+        </script>
+        <!-- step 01
+//step 01
+var msg = "I'm jQuery Button";
+//n.addClass('changeBg');  /*只會增加changeBg單方面的顏色*/
+n.toggleClass('changeBg');  /*toggleClass切換changeBg背景顏色*/
+-->
+        <!-- step 02
+if(!j.is('.clicked')){
+//match condition
+n.stop(true, true).removeClass('changeBg');
+}else{
+//not match condition
+n.stop(true, true).addClass('changeBg');
+};
+return false;
+-->
+    </body>
+</html>
